@@ -5,8 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>juego mastermind</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    
+    <!--Header-->
+    <header>
+        <img src="./img/logo.png" alt="Logo mastermind">
+    </header>
+    <main>
+        <form action="#">
+            <div class="itemform">
+                <label for="nick">Ingresa Tu nick</label>
+                <input type="text" name="nick" id="nick">
+            </div>
+            <div class="itemform">
+                <label for="tamano">tamaño del juego</label>
+                <select name="tamano" id="tamano">
+                    <option value="">-- Porfavor Elige un tamaño --</option>
+                    <option value="1">4x4</option>
+                    <option value="2">5x5</option>
+                    <option value="3">6x6</option>
+                </select>
+            </div>
+            <div class="itemform">
+                <input type="submit" value="Jugar">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>Curso FontEnd con HTML, CSS y Js </p>
+    </footer>
 </body>
 </html>
