@@ -47,6 +47,9 @@ select {
     font-weight: 200;
     font-size: 18px;
 }
+footer{
+    font-weight: 100;
+}
 /* ID y Clases*/
 #nicka{
     font-family: 'Poppins', sans-serif;
@@ -59,4 +62,9 @@ select {
     background-color: #ced4da;
     font-weight: 400;
     font-size: 18px;
+}
+#error{
+    font-weight: 200;
+    text-align: center;
+    color: #fd0c49;
 }
