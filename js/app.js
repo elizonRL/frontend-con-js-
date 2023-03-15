@@ -1,14 +1,11 @@
 // Iniciasion de variables y opjetos 
-const nickInput = document.getElementById("nick");
-const emailInput = document.getElementById("email");
-const tamanoInput = document.getElementById("tamano");
-const formEntrada = document.getElementById("formEntrada");
-const error = document.getElementById("error");
+var nickInput;
+var emailInput;
+var tamanoInput;
+var formEntrada;
+var error;
 //comprobar si hay algun error
-if(sessionStorage.getItem("error")!=null){
-    error.innerText = sessionStorage.getItem("error");
-    sessionStorage.removeItem("error");
-}
+
 //funciones 
 function  comprobarForm(event){
     if(nickInput.value.length==0){
@@ -29,5 +26,20 @@ function  comprobarForm(event){
     return true;
 }
 
-formEntrada.addEventListener("submit", comprobarForm);
+function donCargado(){
+    nickInput = document.getElementById("nick");
+    emailInput = document.getElementById("email");
+    tamanoInput = document.getElementById("tamano");
+    formEntrada = document.getElementById("formEntrada");
+    error = document.getElementById("error");
+
+    if(sessionStorage.getItem("error")!=null){
+        error.innerText = sessionStorage.getItem("error");
+        sessionStorage.removeItem("error");
+    }
+    formEntrada.addEventListener("submit", comprobarForm);
+}
+
+document.addEventListener("DOMContentLoaded", donCargado);
+
 datosGeolocalizacion();
