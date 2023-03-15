@@ -24,6 +24,7 @@ function  comprobarForm(event){
         return false;
     }
     datosUsuario(nickInput);
+    historicoUsuario(nickInput);
     return true;
 }
 
