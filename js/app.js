@@ -10,12 +10,16 @@ function  comprobarForm(event){
         nickInput.focus();
         error.innerText="¡El campo Nick No puede estar vacio!"
         event.preventDefault();
+        return false;
     }else if(tamanoInput.value=="0"){
         console.log("Agrege EL tamaño del juego");
         tamanoInput.focus();
         error.innerText="¡Debe Selecionar un tamaño de juego!"
         event.preventDefault();
+        return false;
     }
+    datosUsuario(nickInput);
+    return true;
 }
 
 formEntrada.addEventListener("submit", comprobarForm);
