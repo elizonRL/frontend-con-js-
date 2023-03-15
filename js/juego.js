@@ -1,2 +1,7 @@
+/*
+    js Del juego
+*/ 
+getDatosUsuario();
 
-mostrarDatosUsuario();
+if(!comprobarDatosUsuario()) location = "index.html";
+console.log(comprobarDatosUsuario());

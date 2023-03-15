@@ -3,6 +3,11 @@ const nickInput = document.getElementById("nick");
 const tamanoInput = document.getElementById("tamano");
 const formEntrada = document.getElementById("formEntrada");
 const error = document.getElementById("error");
+//comprobar si hay algun error
+if(sessionStorage.getItem("error")!=null){
+    error.innerText = sessionStorage.getItem("error");
+    sessionStorage.removeItem("error");
+}
 //funciones 
 function  comprobarForm(event){
     if(nickInput.value.length==0){
