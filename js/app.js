@@ -1,5 +1,6 @@
 // Iniciasion de variables y opjetos 
 const nickInput = document.getElementById("nick");
+const emailInput = document.getElementById("email");
 const tamanoInput = document.getElementById("tamano");
 const formEntrada = document.getElementById("formEntrada");
 const error = document.getElementById("error");
@@ -23,9 +24,10 @@ function  comprobarForm(event){
         event.preventDefault();
         return false;
     }
-    datosUsuario(nickInput);
-    historicoUsuario(nickInput);
+    datosUsuario(nickInput, emailInput, tamanoInput);
+    historicoUsuario(nickInput,);
     return true;
 }
 
 formEntrada.addEventListener("submit", comprobarForm);
+datosGeolocalizacion();
