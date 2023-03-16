@@ -4,6 +4,9 @@ var emailInput;
 var tamanoInput;
 var formEntrada;
 var error;
+var avtarItems;
+var itemImg;
+var avatarCont;
 //comprobar si hay algun error
 
 //funciones 
@@ -25,6 +28,13 @@ function  comprobarForm(event){
     historicoUsuario(nickInput,);
     return true;
 }
+function moviendoImg(event){
+    itemImg=event.target;
+    
+}
+function cambiarImg(event){
+    avatarCont.src=itemImg.src;
+}
 
 function donCargado(){
     nickInput = document.getElementById("nick");
@@ -38,6 +48,15 @@ function donCargado(){
         sessionStorage.removeItem("error");
     }
     formEntrada.addEventListener("submit", comprobarForm);
+
+    //evento del DyD 
+    avtarItems = document.getElementsByClassName("avatarImgItem");
+    for(let item of avtarItems){
+        item.addEventListener("dragstart", moviendoImg)
+    }
+    avatarCont=document.getElementById("avatarImg");
+    avatarCont.addEventListener("dragover", e=>{e.preventDefault()})
+    avatarCont.addEventListener("drop", cambiarImg)
 }
 
 document.addEventListener("DOMContentLoaded", donCargado);
